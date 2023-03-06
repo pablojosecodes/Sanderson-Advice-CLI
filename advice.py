@@ -1,6 +1,7 @@
 import openai
 import json
 import sys
+import os
 import numpy as np
 from numpy.linalg import norm
 
@@ -78,7 +79,8 @@ def answer(query):
             {"role": "user", "content": query + " Respond in a few full sentences. Use the following context: \""  + context + "\""}
       ]
     ))
-openai.api_key = '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'
+
+openai.api_key = os.environ['OPENAI_API_KEY']
 theINPUT = sys.argv[1]
 print(answer(theINPUT)['choices'][0]['message']['content'])
 
