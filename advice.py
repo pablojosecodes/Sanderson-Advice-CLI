@@ -69,7 +69,7 @@ def answer(query):
     ans = get_context(query)
     context = ans[0]
     # print(context)
-    print(get_video_link(int(ans[2]), int(ans[1])))
+    links = (get_video_link(int(ans[2]), int(ans[1])))
     
     return (openai.ChatCompletion.create(
       model="gpt-3.5-turbo",
@@ -78,9 +78,31 @@ def answer(query):
 #             {"role": "system", "content": context},
             {"role": "user", "content": query + " Respond in a few full sentences. Use the following context: \""  + context + "\""}
       ]
-    ))
+    ), links)
 
-openai.api_key = os.environ['OPENAI_API_KEY']
-theINPUT = sys.argv[1]
-print(answer(theINPUT)['choices'][0]['message']['content'])
+
+
+def main():
+    openai.api_key = os.environ['OPENAI_API_KEY']
+    theINPUT = input("Ask brandon anything: ")
+
+    response = answer(theINPUT)
+    print(response[0]['choices'][0]['message']['content'])
+
+
+    import webbrowser
+    while True:
+        action = input("Next steps? (l- open link | n- new question | q- quit)\n> ")
+        if action == 'l':
+            webbrowser.open(response[1][0])
+        else:
+            break
+
+    if action == 'n':
+        main() # Woohoo- unnecessary recursion
+    return 1
+
+
+if __name__ == "__main__":
+    main()
 
