@@ -1,5 +1,5 @@
 # Sanderson-Advice-CLI
-CLI tool to get writing advice from Brandon Sanderson's lectures (may add more resources, but [Sanderson's lectures](https://www.youtube.com/watch?v=0cf-qdZ7GbA&list=PLSH_xM-KC3Zv-79sVZTTj-YA6IAqh8qeQ) are such a fantastic resource.
+CLI tool to get writing advice from Brandon Sanderson's lectures (may add more resources, but [Sanderson's lectures](https://www.youtube.com/watch?v=0cf-qdZ7GbA&list=PLSH_xM-KC3Zv-79sVZTTj-YA6IAqh8qeQ) are such a fantastic resource. I decided not to use a vector database or cloud hosting for this little project because I want it to be more accessible to authors / have no interest in monetizing it.
 
 # Example Output
 
