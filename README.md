@@ -1,5 +1,5 @@
 # Sanderson-Advice-CLI
-CLI tool to get writing advice from Brandon Sanderson's lectures (may add more resources, but Sanderson's lectures are such a fantastic resource.
+CLI tool to get writing advice from Brandon Sanderson's lectures (may add more resources, but [Sanderson's lectures](https://www.youtube.com/watch?v=0cf-qdZ7GbA&list=PLSH_xM-KC3Zv-79sVZTTj-YA6IAqh8qeQ) are such a fantastic resource.
 
 # Installation/Setup
 
