@@ -1,8 +1,39 @@
 # Sanderson-Advice-CLI
 CLI tool to get writing advice from Brandon Sanderson's lectures (may add more resources, but Sanderson's lectures are such a fantastic resource.
 
+# Installation/Setup
+
+Install Python
+```
+# for Mac
+brew install python
+```
+
+Clone repo, create a virtual environment and install dependencies
+```
+git clone ___
+cd Sanderson-Advice-CLI
+python3 -m venv .venv
+pip3 install -r requirements.txt 
+```
+
+Set up your [OpenAI API key](https://platform.openai.com/account/api-keys).
+```
+export OPENAI_API_KEY=[Your API Key]
+```
+This uses the new, incredibly cheap ChatGPT API, so each question should come out to around $.001. Using the free $18 credits that OpenAI offers, means you get 18,000 questions to ask!!
+
 
 # Usage
+
+Runs in the terminal, simply run the advice script
+```
+python3 advice.py
+```
+Ask any questions you have and after receiving a response, either:
+ - Proceed (using 'n') to ask a new question
+ - View Youtube clip (using 'l') which the algorithm is referencing
+ - Quit (using 'q')
 
 # Example Output
 
